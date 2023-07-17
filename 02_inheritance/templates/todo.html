@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ title or "Todos" }}</title>
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block content %}
   <h1>{{ text }}</h1>
 
   {% if completed %}
@@ -13,5 +8,5 @@
   {% else %}
     <p>You haven't completed this yet. Why not do it now?</p>
   {% endif %}
-</body>
-</html>
+{% endblock %}
+

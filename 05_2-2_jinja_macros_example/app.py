@@ -3,6 +3,7 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
+
 items = [
     {"name": "Chair", "stock": 3},
     {"name": "Table", "stock": 1},
@@ -23,7 +24,7 @@ def home():
 
 @app.route("/items")
 def items_list():
-    return render_templtiate("items.html", items=items)
+    return render_template("items.html", items=items)
 
 
 if __name__ == "__main__":
